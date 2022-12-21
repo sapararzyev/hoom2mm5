@@ -7,4 +7,10 @@
     <string name="your_score">your_score</string>
     <string name="try_again">try_again</string>
     <string name="_100">100</string>
+    <string name="calculate">calculate</string>
+    <string name="ne">Ne</string>
+    <string name="second_name">Second_name</string>
+    <string name="yout">You</string>
+    <string name="fist_name">fist_name</string>
+    <string name="love_colculator">love_colculator</string>
 </resources>

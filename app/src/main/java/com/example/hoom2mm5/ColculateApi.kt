@@ -13,6 +13,7 @@ interface ColculateApi {
         @Query("fname") firstName: String,
         @Header("X-RapidAPI-Key") Key : String = "018edc51c1mshb117e9da4daae38p17734fjsn25b9109b0cf1",
         @Header("X-RapidAPI-Host") host: String = "love-calculator.p.rapidapi.com"
+
     ): Call<ColculateModel>
 
 }

@@ -1,4 +1,4 @@
-package com.example.hoom2mm5.ui
+package com.example.hoom2mm5.ui.fragment.second
 
 import android.annotation.SuppressLint
 import android.os.Bundle
@@ -10,8 +10,8 @@ import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import com.example.hoom2mm5.databinding.FragmentSekondBinding
 
-
 class SekondFragment : Fragment() {
+
     private lateinit var binding: FragmentSekondBinding
     private val args by navArgs <SekondFragmentArgs>()
     private val firstName by lazy { args.fname }

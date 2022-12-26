@@ -1,4 +1,4 @@
-package com.example.hoom2mm5.ui
+package com.example.hoom2mm5.ui.fragment.mein
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -7,10 +7,11 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
-import com.example.hoom2mm5.AktivityMainViewModel
+import com.example.hoom2mm5.model.AktivityMainViewModel
 import com.example.hoom2mm5.databinding.FragmentMainBinding
+import dagger.hilt.android.AndroidEntryPoint
 
-
+@AndroidEntryPoint
 class MainFragment : Fragment() {
     private lateinit var binding: FragmentMainBinding
     private val viewModel: AktivityMainViewModel by viewModels()
@@ -25,7 +26,6 @@ class MainFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
         binding.calculate.setOnClickListener {
             getReqiest()
         } }
@@ -34,11 +34,8 @@ class MainFragment : Fragment() {
         viewModel.getRequest(binding.edMe.text.toString(),binding.edYou.text.toString())
             .observe(viewLifecycleOwner) {
                 findNavController().navigate(
-                    MainFragmentDirections
-                        .actionMainFragmentToSekondFragment(
-                            binding.edMe.text.toString()
-                            ,it.percentage
-                            ,binding.edYou.text.toString())
+                    MainFragmentDirections.actionMainFragmentToSekondFragment(
+                        binding.edMe.text.toString(), it.percentage, binding.edYou.text.toString())
                 )
             } }
 }

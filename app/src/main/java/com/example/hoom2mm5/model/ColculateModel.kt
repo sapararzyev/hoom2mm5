@@ -1,4 +1,4 @@
-package com.example.hoom2mm5
+package com.example.hoom2mm5.model
 
 import com.google.gson.annotations.SerializedName
 
@@ -9,5 +9,4 @@ data class ColculateModel (
     val secondName: String,
     val percentage: String,
     val result: String
-
     )
